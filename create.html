@@ -57,7 +57,8 @@
         const form = document.getElementById('form');
         form.addEventListener('submit', create);
 
-        function create() {
+        function create(event) {
+            event.preventDefault();
             const data = new FormData(document.getElementById('form'));
             console.log(data)
             fetch('http://159.89.32.176/api/flights//', {
